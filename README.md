@@ -8,6 +8,7 @@ Welcome to **Mini RPG Adventure** — a simple browser-based role-playing game w
 
 <img width="897" height="255" alt="image" src="https://github.com/user-attachments/assets/136186fd-edfc-4a24-bff6-a49ea5c38a83" />
 
+Link Demo: https://acheronx0577.github.io/JavaScript-Role-Play-Game
 ---
 
 ## 🎮 How to Play
