@@ -4,6 +4,12 @@ Welcome to **Mini RPG Adventure** — a simple browser-based role-playing game w
 
 ---
 
+## 📸 Game Preview
+
+<img width="897" height="255" alt="image" src="https://github.com/user-attachments/assets/136186fd-edfc-4a24-bff6-a49ea5c38a83" />
+
+---
+
 ## 🎮 How to Play
 
 1. 🏙️ Start in the **Town Square**  
@@ -55,13 +61,6 @@ Just open `index.html` in your favorite browser 🌐 and start playing!
 - Random **easter egg mini-game** 🎲
 - **Level progression** and XP tracking
 - Retro-style **HTML + CSS + JS** setup  
-
----
-
-## 📸 Game Preview
-
-_(Add screenshots of the game UI here — example below)_  
-![Game Screenshot](assets/preview.png)
 
 ---
 
