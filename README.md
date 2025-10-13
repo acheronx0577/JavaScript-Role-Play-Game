@@ -47,7 +47,7 @@ git clone git@github.com:acheronx0577/JavaScript-Role-Play-Game.git
 
 ### 2️⃣ Open the project folder
 ```
-cd JavaScript-Role-Play-Game
+cd JavaScript Role Play Game
 ```
 
 ### 3️⃣ Run the game
