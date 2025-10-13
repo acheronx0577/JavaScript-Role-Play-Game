@@ -34,12 +34,12 @@ Welcome to **Mini RPG Adventure** — a simple browser-based role-playing game w
 ## 🧰 Installation & Usage
 
 ### 1️⃣ Clone this repo
-```bash
-git clone git@github.com:yourusername/mini-rpg-adventure.git
+```
+git clone git@github.com:acheronx0577/JavaScript-Role-Play-Game.git
 ```
 
 ### 2️⃣ Open the project folder
-```bash
+```
 cd mini-rpg-adventure
 ```
 
