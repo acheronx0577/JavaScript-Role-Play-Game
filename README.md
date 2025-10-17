@@ -4,6 +4,12 @@ Welcome to **Mini RPG Adventure** — a simple browser-based role-playing game w
 
 ---
 
+## 🎓 Certification
+
+This project was completed as part of the **freeCodeCamp JavaScript Algorithms and Data Structures** certification requirements.
+
+---
+
 ## 📸 Game Preview
 
 <img width="897" height="255" alt="image" src="https://github.com/user-attachments/assets/136186fd-edfc-4a24-bff6-a49ea5c38a83" />
