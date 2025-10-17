@@ -6,9 +6,15 @@ Welcome to **Mini RPG Adventure** — a simple browser-based role-playing game w
 
 ## 🎓 Certification
 
-🔗 **Course Link:** [JavaScript Algorithms and Data Structures - freeCodeCamp](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8)
+**Course:** [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8)
 
-This project was completed as part of the freeCodeCamp certification requirements to demonstrate proficiency in JavaScript fundamentals, algorithms, and data structures.
+**Complete Your Certificate:**
+- ✅ This project (Role-Play-Game) fulfills one requirement
+
+**Full Project Suite:** [25+ hands-on projects from Pyramid Generator to Final Certification Projects](https://github.com/acheronx0577/JavaScript-Algorithms-and-data-structures/tree/main)
+- 🎓 Complete all projects to earn your certification
+
+This repository contains the complete portfolio of projects needed to demonstrate JavaScript proficiency and earn the freeCodeCamp certificate.
 
 ---
 
