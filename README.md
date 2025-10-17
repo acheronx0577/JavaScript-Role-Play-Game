@@ -16,7 +16,7 @@ This project was completed as part of the freeCodeCamp certification requirement
 
 <img width="897" height="255" alt="image" src="https://github.com/user-attachments/assets/136186fd-edfc-4a24-bff6-a49ea5c38a83" />
 
-Link Demo: https://acheronx0577.github.io/JavaScript-Role-Play-Game
+Live Demo: https://acheronx0577.github.io/JavaScript-Role-Play-Game
 
 ---
 
