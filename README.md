@@ -19,8 +19,11 @@ This repository contains the complete portfolio of projects needed to demonstrat
 ---
 
 ## 📸 Game Preview
-
+Old Design:
 <img width="897" height="255" alt="image" src="https://github.com/user-attachments/assets/136186fd-edfc-4a24-bff6-a49ea5c38a83" />
+
+New Design: 
+<img width="1041" height="926" alt="Screenshot 2025-10-24 161811" src="https://github.com/user-attachments/assets/5d058c3b-280b-4ed2-945f-e1544850dffe" />
 
 Live Demo: https://acheronx0577.github.io/JavaScript-Role-Play-Game
 
