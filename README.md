@@ -19,6 +19,7 @@ This repository contains the complete portfolio of projects needed to demonstrat
 ---
 
 ## 📸 Game Preview
+
 Old Design:
 <img width="897" height="255" alt="image" src="https://github.com/user-attachments/assets/136186fd-edfc-4a24-bff6-a49ea5c38a83" />
 
