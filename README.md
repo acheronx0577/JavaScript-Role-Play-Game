@@ -1,8 +1,6 @@
-# ⚔️ Mini RPG Adventure 🐉
+# ⚔️ Mini RPG Adventure
 
-Welcome to **Mini RPG Adventure** — a simple browser-based role-playing game where you explore caves, fight monsters, earn gold, and upgrade your weapons! 💰⚒️
-
----
+A browser-based role-playing game where you explore, fight monsters, and upgrade your gear!
 
 ## 🎓 Certification
 
@@ -16,45 +14,34 @@ Welcome to **Mini RPG Adventure** — a simple browser-based role-playing game w
 
 This repository contains the complete portfolio of projects needed to demonstrate JavaScript proficiency and earn the freeCodeCamp certificate.
 
----
-
 ## 📸 Game Preview
 
 ### Old Design:
-
 <img width="897" height="255" alt="image" src="https://github.com/user-attachments/assets/136186fd-edfc-4a24-bff6-a49ea5c38a83" />
 
-### New Design: 
+### New Design:
 <img width="1041" height="926" alt="Screenshot 2025-10-24 161811" src="https://github.com/user-attachments/assets/5d058c3b-280b-4ed2-945f-e1544850dffe" />
 
-Live Demo: https://acheronx0577.github.io/JavaScript-Role-Play-Game
+**Live Demo:** https://acheronx0577.github.io/JavaScript-Role-Play-Game
 
----
+## ✨ Features
 
-## 🎮 How to Play
+- **🏙️ Three Locations**: Town Square, Cave, and Dragon's Lair
+- **⚔️ Combat System**: Attack, Dodge, and Run mechanics
+- **🛒 Inventory Management**: Buy/sell weapons and health potions
+- **📈 Progression System**: Earn gold, upgrade gear, gain XP
+- **🎲 Easter Eggs**: Hidden mini-games and surprises
 
-1. 🏙️ Start in the **Town Square**  
-   - Visit the store to buy health or weapons.  
-   - Go to the cave to fight monsters.  
-   - Or challenge the dragon if you're feeling brave! 🐲  
+## 🎯 How to Play
 
-2. ⚔️ **Combat System**
-   - Click “Attack” to strike your enemy.  
-   - “Dodge” to avoid hits.  
-   - “Run” to escape to safety.  
-
-3. 💀 **Lose Condition:** Health reaches 0.  
-4. 🏆 **Win Condition:** Defeat the mighty dragon! 🎉  
-
----
-
-## 🧩 Game Files
-
-| File | Description |
-|------|--------------|
-| `index.html` | Main game layout |
-| `script.js` | Game logic and mechanics ⚙️ |
-| `style.css` | Visual design 🎨 |
+1. **Start in Town Square** - Buy supplies or choose your adventure
+2. **Explore Locations** - Fight monsters in caves or challenge the dragon
+3. **Combat Choices**:
+   - **Attack** - Deal damage to enemies
+   - **Dodge** - Avoid enemy attacks
+   - **Run** - Escape to safety
+4. **Win Condition**: Defeat the mighty dragon!
+5. **Lose Condition**: Health reaches zero
 
 ---
 
@@ -62,42 +49,41 @@ Live Demo: https://acheronx0577.github.io/JavaScript-Role-Play-Game
 
 ### 1️⃣ Clone this repo
 ```
-git clone git@github.com:acheronx0577/JavaScript-Role-Play-Game.git
+git clone git@github.com:acheronx0577/JavaScript-Building-a-Number-Sorter.git
 ```
 
 ### 2️⃣ Open the project folder
 ```
-cd JavaScript-Role-Play-Game
+cd JavaScript-Building-a-Number-Sorter
 ```
 
-### 3️⃣ Run the game
+### 3️⃣ Run the file
 Just open `index.html` in your favorite browser 🌐 and start playing!
 
 ---
 
-## 🧙‍♂️ Features
+## 📁 Project Structure
 
-- Simple **turn-based combat**
-- **Inventory system** (buy/sell weapons)
-- Random **easter egg mini-game** 🎲
-- **Level progression** and XP tracking
-- Retro-style **HTML + CSS + JS** setup  
+- `index.html` - Game interface and layout
+- `script.js` - Game logic, combat system, and mechanics
+- `style.css` - Visual design and animations
+
+## 🛠️ Technical Features
+
+- Turn-based combat system
+- Random enemy encounters
+- Gold and inventory management
+- Progressive difficulty scaling
+- Responsive design for all devices
+
+## 🤝 Contributing
+
+Want to enhance the game? Fork the repo and submit PRs for:
+- New enemies and locations
+- Additional weapons and items
+- Enhanced combat mechanics
+- Visual improvements
 
 ---
 
-## 💡 Contribute
-
-Want to improve this project?  
-- Fork the repo 🍴  
-- Make your changes ✍️  
-- Submit a Pull Request ✅  
-
----
-
-## 📜 License
-
-This project is open-source under the **MIT License**.
-
----
-
-⭐ **If you enjoy the game, don’t forget to give it a star!** ⭐
+*Built with ❤️ through freeCodeCamp | Adventure awaits!*
