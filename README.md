@@ -24,14 +24,6 @@ This repository contains the complete portfolio of projects needed to demonstrat
 
 **Live Demo:** https://acheronx0577.github.io/JavaScript-Role-Play-Game
 
-## ✨ Features
-
-- **🏙️ Three Locations**: Town Square, Cave, and Dragon's Lair
-- **⚔️ Combat System**: Attack, Dodge, and Run mechanics
-- **🛒 Inventory Management**: Buy/sell weapons and health potions
-- **📈 Progression System**: Earn gold, upgrade gear, gain XP
-- **🎲 Easter Eggs**: Hidden mini-games and surprises
-
 ## 🎯 How to Play
 
 1. **Start in Town Square** - Buy supplies or choose your adventure
@@ -52,29 +44,10 @@ This repository contains the complete portfolio of projects needed to demonstrat
 git clone git@github.com:acheronx0577/JavaScript-Building-a-Number-Sorter.git
 ```
 
-### 2️⃣ Open the project folder
-```
-cd JavaScript-Building-a-Number-Sorter
-```
-
-### 3️⃣ Run the file
+### 2️⃣ Run the file
 Just open `index.html` in your favorite browser 🌐 and start playing!
 
 ---
-
-## 📁 Project Structure
-
-- `index.html` - Game interface and layout
-- `script.js` - Game logic, combat system, and mechanics
-- `style.css` - Visual design and animations
-
-## 🛠️ Technical Features
-
-- Turn-based combat system
-- Random enemy encounters
-- Gold and inventory management
-- Progressive difficulty scaling
-- Responsive design for all devices
 
 ## 🤝 Contributing
 
