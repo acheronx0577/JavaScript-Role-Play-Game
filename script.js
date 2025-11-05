@@ -23,6 +23,8 @@ const playerHealthBar = document.querySelector("#playerHealthBar");
 const playerHealthText = document.querySelector("#playerHealthText");
 const inventoryDisplay = document.querySelector("#inventoryDisplay");
 const locationText = document.querySelector("#locationText");
+const statusElement = document.querySelector("#status");
+const weaponPowerElement = document.querySelector("#weaponPower");
 
 // Game data
 const weapons = [
@@ -34,17 +36,17 @@ const weapons = [
 
 const monsters = [
   {
-    name: "slime",
+    name: "SLIME",
     level: 2,
     health: 15
   },
   {
-    name: "fanged beast",
+    name: "FANGED_BEAST",
     level: 8,
     health: 60
   },
   {
-    name: "dragon",
+    name: "DRAGON",
     level: 20,
     health: 300
   }
@@ -52,49 +54,49 @@ const monsters = [
 
 const locations = [
   {
-    name: "town square",
+    name: "TOWN_SQUARE",
     "button text": ["Go to store", "Go to cave", "Fight dragon"],
     "button functions": [goStore, goCave, fightDragon],
     text: "You are in the town square. You see a sign that says \"Store\". The cave entrance looms in the distance, and rumors say the dragon has been spotted nearby."
   },
   {
-    name: "store",
+    name: "STORE",
     "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
     "button functions": [buyHealth, buyWeapon, goTown],
     text: "You enter the store. A friendly merchant offers health potions and weapons for sale."
   },
   {
-    name: "cave",
+    name: "CAVE",
     "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
     "button functions": [fightSlime, fightBeast, goTown],
     text: "You enter the dark cave. Strange noises echo in the distance. Monsters lurk in the shadows."
   },
   {
-    name: "fight",
+    name: "COMBAT",
     "button text": ["Attack", "Dodge", "Run"],
     "button functions": [attack, dodge, goTown],
     text: "You are fighting a monster. Choose your action carefully!"
   },
   {
-    name: "kill monster",
+    name: "VICTORY",
     "button text": ["Go to town square", "Go to town square", "Go to town square"],
     "button functions": [goTown, goTown, easterEgg],
     text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
   },
   {
-    name: "lose",
+    name: "GAME_OVER",
     "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
     "button functions": [restart, restart, restart],
-    text: "You have been defeated. The town remains under the dragon's threat. &#x2620;"
+    text: "You have been defeated. The town remains under the dragon's threat. 💀"
   },
   { 
-    name: "win", 
+    name: "WIN", 
     "button text": ["REPLAY?", "REPLAY?", "REPLAY?"], 
     "button functions": [restart, restart, restart], 
-    text: "With a final mighty blow, you defeat the dragon! The town is safe at last! YOU WIN THE GAME! &#x1F389;" 
+    text: "With a final mighty blow, you defeat the dragon! The town is safe at last! YOU WIN THE GAME! 🎉" 
   },
   {
-    name: "easter egg",
+    name: "SECRET",
     "button text": ["2", "8", "Go to town square?"],
     "button functions": [pickTwo, pickEight, goTown],
     text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
@@ -108,6 +110,8 @@ function init() {
   button3.onclick = fightDragon;
   updatePlayerHealth();
   updateInventory();
+  updateWeaponPower();
+  statusElement.textContent = "READY";
 }
 
 // Update location
@@ -120,36 +124,34 @@ function update(location) {
   button2.onclick = location["button functions"][1];
   button3.onclick = location["button functions"][2];
   text.innerHTML = location.text;
-  locationText.textContent = location.name.toUpperCase();
+  locationText.textContent = location.name;
   
   // Add visual feedback
   text.parentElement.classList.add('combat-shake');
   setTimeout(() => {
     text.parentElement.classList.remove('combat-shake');
   }, 400);
+  
+  // Update status
+  statusElement.textContent = location.name;
 }
 
-// Update player health display - FIXED: Now shows values above 100
+// Update player health display
 function updatePlayerHealth() {
-  // Update the health text in stats panel
   healthText.innerText = health;
-  
-  // For health bar, we'll cap the visual at 100% but show the actual number
-  const healthPercent = Math.min(health, 100); // Cap visual at 100%
+  const healthPercent = Math.min(health, 100);
   playerHealthBar.style.width = `${healthPercent}%`;
-  
-  // Show actual health in the health text (can be above 100)
   playerHealthText.textContent = `${health}`;
   
   // Change color based on health level
   if (health > 100) {
-    playerHealthBar.style.background = "linear-gradient(90deg, #ffd700, #b8860b)";
+    playerHealthBar.style.background = "linear-gradient(90deg, #f1fa8c 0%, #ffb86c 100%)";
   } else if (health > 60) {
-    playerHealthBar.style.background = "linear-gradient(90deg, #ffd700, #b8860b)";
+    playerHealthBar.style.background = "linear-gradient(90deg, #50fa7b 0%, #27ca3f 100%)";
   } else if (health > 30) {
-    playerHealthBar.style.background = "linear-gradient(90deg, #ffa500, #ff8c00)";
+    playerHealthBar.style.background = "linear-gradient(90deg, #ffb86c 0%, #ff9500 100%)";
   } else {
-    playerHealthBar.style.background = "linear-gradient(90deg, #8b0000, #660000)";
+    playerHealthBar.style.background = "linear-gradient(90deg, #ff5555 0%, #ff3b30 100%)";
   }
 }
 
@@ -162,6 +164,11 @@ function updateInventory() {
     itemElement.textContent = item;
     inventoryDisplay.appendChild(itemElement);
   });
+}
+
+// Update weapon power display
+function updateWeaponPower() {
+  weaponPowerElement.textContent = weapons[currentWeapon].power;
 }
 
 // Location functions
@@ -181,11 +188,8 @@ function buyHealth() {
   if (gold >= 10) {
     gold -= 10;
     health += 10;
-    // REMOVED THE HEALTH CAP - players can go above 100 now!
-    
     goldText.innerText = gold;
     
-    // Update health display and add visual feedback
     updatePlayerHealth();
     
     // Add healing animation
@@ -211,6 +215,7 @@ function buyWeapon() {
       text.innerText = `You purchased a ${newWeapon}! Your attack power has increased! ⚔️`;
       inventory.push(newWeapon);
       updateInventory();
+      updateWeaponPower();
     } else {
       text.innerText = "You do not have enough gold to buy this weapon. You need 30 gold.";
     }
@@ -230,6 +235,7 @@ function sellWeapon() {
     
     text.innerText = "You sold a " + currentWeaponName + " for 15 gold. 💰";
     updateInventory();
+    updateWeaponPower();
   } else {
     text.innerText = "Don't sell your only weapon! You need it to fight!";
   }
@@ -255,9 +261,9 @@ function goFight() {
   update(locations[3]);
   monsterHealth = monsters[fighting].health;
   
-  monsterStats.style.display = "block";
+  monsterStats.style.display = "flex";
   monsterName.innerText = monsters[fighting].name;
-  monsterHealthText.innerText = monsterHealth;
+  monsterHealthText.innerText = `${monsterHealth}/${monsters[fighting].health}`;
   
   // Update monster health bar
   const monsterHealthPercent = (monsterHealth / monsters[fighting].health) * 100;
@@ -283,15 +289,15 @@ function attack() {
     text.innerText += " The " + monsters[fighting].name + " attacks you for " + monsterDamage + " damage! 💔";
     
     // Visual feedback for damage
-    document.querySelector('.player-health').classList.add('damage-pulse');
+    document.querySelector('.health-display').classList.add('damage-pulse');
     setTimeout(() => {
-      document.querySelector('.player-health').classList.remove('damage-pulse');
+      document.querySelector('.health-display').classList.remove('damage-pulse');
     }, 300);
   }
   
   // Update displays
-  updatePlayerHealth(); // This now updates both health bar and text
-  monsterHealthText.innerText = Math.max(0, monsterHealth);
+  updatePlayerHealth();
+  monsterHealthText.innerText = `${Math.max(0, monsterHealth)}/${monsters[fighting].health}`;
   
   // Update monster health bar
   const monsterHealthPercent = (monsterHealth / monsters[fighting].health) * 100;
@@ -313,6 +319,7 @@ function attack() {
     text.innerText += " Your " + inventory.pop() + " breaks! 🔨";
     currentWeapon--;
     updateInventory();
+    updateWeaponPower();
   }
 }
 
@@ -362,6 +369,7 @@ function restart() {
   
   updatePlayerHealth();
   updateInventory();
+  updateWeaponPower();
   goTown();
 }
 
